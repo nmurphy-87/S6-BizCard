@@ -9,10 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -63,11 +60,35 @@ fun CreateBizCard(
             ) {
                 CreateImageProfile()
                 Divider(thickness = 2.dp)
+                Column(
+                    modifier = Modifier.padding(5.dp)
+                ){
+                    TitleAndCaption()
+                }
             }
 
 
         }
     }
+}
+
+@Composable
+private fun TitleAndCaption() {
+    Text(
+        text = "Murphy N.",
+        style = MaterialTheme.typography.h4,
+        color = MaterialTheme.colors.primaryVariant
+    )
+    Text(
+        text = "Android Developer",
+        modifier = Modifier.padding(5.dp),
+        style = MaterialTheme.typography.subtitle1
+    )
+    Text(
+        text = "nm@android.dev",
+        modifier = Modifier.padding(5.dp),
+        style = MaterialTheme.typography.subtitle1
+    )
 }
 
 @Composable
