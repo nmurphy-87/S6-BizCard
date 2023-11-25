@@ -62,8 +62,15 @@ fun CreateBizCard(
                 Divider(thickness = 2.dp)
                 Column(
                     modifier = Modifier.padding(5.dp)
-                ){
+                ) {
                     TitleAndCaption()
+                }
+                Button(
+                    onClick = { /*TODO*/ }) {
+                    Text(
+                        text = "Portfolio",
+                        style = MaterialTheme.typography.button
+                    )
                 }
             }
 
@@ -92,7 +99,7 @@ private fun TitleAndCaption() {
 }
 
 @Composable
-private fun CreateImageProfile(modifier : Modifier = Modifier) {
+private fun CreateImageProfile(modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
             .size(150.dp)
